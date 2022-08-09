@@ -17,6 +17,7 @@ const UrlForm = () => {
     <form>
         <input
           type='text'
+          className="title-input"
           placeholder='Title...'
           name='title'
           value={title}
@@ -25,6 +26,7 @@ const UrlForm = () => {
 
         <input
           type='text'
+          className="url-input"
           placeholder='URL to Shorten...'
           name='urlToShorten'
           value={urlToShorten}
