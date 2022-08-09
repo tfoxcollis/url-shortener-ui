@@ -28,6 +28,7 @@ describe("App", () => {
 
   it("should be able to submit form, and new shortened URL is rendered", () => {
     cy.intercept("GET", "http://localhost:3001/api/v1/urls", {fixture: "addurl"})
+    cy.intercept("POST", "http://localhost:3001/api/v1/urls", {fixture: "addurl"})
     cy.get(".title-input").type("My Vacation Picture")
     cy.get(".url-input").type("https://images.unsplash.com/photo-1531898418865-480b7090470f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=79")
     cy.get(".form-submit-btn").click()
