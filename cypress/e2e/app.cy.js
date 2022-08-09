@@ -11,7 +11,7 @@ describe("App", () => {
   })
 
   it("should be able to view existing shortened URLs", () => {
-    cy.get(".url").contains("http://localhost:3001/useshorturl/1")
+    cy.get(".url a").should("have.text", "http://localhost:3001/useshorturl/1")
   })
 
   it("should be able to view the Form with the proper inputs", () => {
