@@ -11,7 +11,7 @@ useEffect(() => {
   getUrls()
   .then(data => {
     setUrls(data.urls)})
-})
+}, [])
 
     return (
       <main className="App">
