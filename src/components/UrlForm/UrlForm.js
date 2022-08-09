@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
-
+import { postUrl } from '../../apiCalls';
 
 const UrlForm = () => {
   const [ title, setTitle ] = useState("")
   const [ urlToShorten, setUrlToShorten ] = useState("")
 
- 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    clearInputs();
-  }
-
-  const clearInputs = () => {
-    setTitle("");
-    setUrlToShorten("");
+    const postBody = {
+      long_url: urlToShorten,
+      title: title
+    }
+    postUrl(postBody)
   }
 
   return (
