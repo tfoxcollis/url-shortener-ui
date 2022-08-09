@@ -20,9 +20,9 @@ describe("App", () => {
   })
 
   it("should show information reflected in the input fields when form is filled out", () => {
-    cy.get(".title-input").type("Awesome Photo")
-      .get(".title-input").should("have.value", "Awesome Photo")
-    cy.get(".url-input").type("https://images.unsplash.com/photo-1531898418865-480b7090470f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80")
-    .get(".url-input").should("have.value", "https://images.unsplash.com/photo-1531898418865-480b7090470f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80")
+    cy.get(".title-input").type("My Vacation Picture")
+      .get(".title-input").should("have.value", "My Vacation Picture")
+    cy.get(".url-input").type("https://images.unsplash.com/photo-1531898418865-480b7090470f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=79")
+    .get(".url-input").should("have.value", "https://images.unsplash.com/photo-1531898418865-480b7090470f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=79")
   })
 })
